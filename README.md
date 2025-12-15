@@ -29,7 +29,7 @@ Los datos originales no se incluyen en este repositorio y deben obtenerse direct
 
 ## Estructura del repositorio
 
-.
+```r
 ├── data/
 │   ├── raw/                          # Datos originales (no incluidos)
 │   └── processed/
@@ -41,7 +41,7 @@ Los datos originales no se incluyen en este repositorio y deben obtenerse direct
 │   └── 02_exploratory_analysis_homicidios_2024.R
 ├── README.md
 └── .gitignore
-
+```
 ---
 
 ## Requisitos
