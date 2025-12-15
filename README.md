@@ -42,6 +42,7 @@ Los datos originales no se incluyen en este repositorio y deben obtenerse direct
 ├── README.md
 └── .gitignore
 ```
+
 ---
 
 ## Requisitos
@@ -58,10 +59,12 @@ Para instalar los paquetes necesarios:
 ```r
 install.packages(c("readr", "dplyr", "ggplot2", "scales"))
 ```
+
 ---
+
 ## Uso del proyecto
 
-##1. Limpieza de datos
+## 1. Limpieza de datos
 
 Coloca el archivo de microdatos de Defunciones Registradas 2024 en la carpeta data/raw/.
 
@@ -70,30 +73,37 @@ Ejecuta el script de limpieza:
 ```r
 source("R/01_read_clean.R")
 ```
+
 Este script:
-	•	Filtra los registros correspondientes a presuntos homicidios.
-	•	Construye variables analíticas clave:
-	  •	Sexo
-	  •	Edad y grupos de edad
-	  •	Tipo de espacio de ocurrencia
-	  •	Nacionalidad
-	  •	Racialización (condición indígena y afromexicana)
-	  •	Tipo de entidad federativa (frontera norte, frontera sur y no fronteriza)
-	•	Genera la base limpia homicidios_2024_clean.csv en la carpeta data/processed/.
+- Filtra los registros correspondientes a presuntos homicidios.
+- Construye variables analíticas clave:
+  - Sexo
+  - Edad y grupos de edad
+  - Tipo de espacio de ocurrencia
+  - Nacionalidad
+  - Racialización (condición indígena y afromexicana)
+  - Tipo de entidad federativa (frontera norte, frontera sur y no fronteriza)
+- Genera la base limpia homicidios_2024_clean.csv en la carpeta data/processed/.
+
 ---
-##2. Análisis exploratorio
+
+## 2. Análisis exploratorio
 
 Una vez generada la base limpia, ejecuta:
+
 ```r
 source("R/02_exploratory_analysis_homicidios_2024.R")
 ```
+
 Este script produce:
-	•	Visualizaciones asociadas a cada uno de los tres hallazgos principales.
-	•	Tablas de apoyo para la interpretación de los resultados.
+- Visualizaciones asociadas a cada uno de los tres hallazgos principales.
+- Tablas de apoyo para la interpretación de los resultados.
 
 Las figuras se guardan automáticamente en la carpeta outputs/figures/.
+
 ---
-Principales hallazgos
+
+### Principales hallazgos
 
 1. Tipo de espacio y sexo
 
@@ -114,6 +124,6 @@ La distribución de los homicidios a lo largo del ciclo de vida varía según el
 ---
 
 Notas metodológicas
-	•	Los porcentajes presentados corresponden a proporciones dentro de cada grupo analizado.
-	•	La racialización se construye a partir de la autoidentificación indígena y afromexicana reportada en los microdatos.
-	•	Los resultados deben interpretarse como análisis descriptivos y exploratorios, no como evidencia causal.
+- Los porcentajes presentados corresponden a proporciones dentro de cada grupo analizado.
+- La racialización se construye a partir de la autoidentificación indígena y afromexicana reportada en los microdatos.
+- Los resultados deben interpretarse como análisis descriptivos y exploratorios, no como evidencia causal.
